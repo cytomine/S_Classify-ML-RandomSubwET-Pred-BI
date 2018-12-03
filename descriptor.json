@@ -58,7 +58,10 @@
       "value-key": "@ID",
       "optional": false,
       "id": "cytomine_id_job",
-      "type": "Number",
+      "type": "Domain",
+      "uri": "/api/job.json?project=$currentProject$",
+      "uriSortAttribute": "softwareName",
+      "uriPrintAttribute": "softwareName",
       "command-line-flag": "--@id"
     },
     {
