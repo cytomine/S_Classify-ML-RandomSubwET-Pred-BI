@@ -155,7 +155,7 @@
       "set-by-server": false,
       "value-key": "@ID",
       "optional": true,
-      "id": "cytomine_id_positive_term",
+      "id": "cytomine_id_term_positive",
       "type": "Number",
       "command-line-flag": "--@id"
     },
@@ -166,16 +166,16 @@
       "set-by-server": false,
       "value-key": "@ID",
       "optional": true,
-      "id": "cytomine_id_negative_term",
+      "id": "cytomine_id_term_negative",
       "type": "Number",
       "command-line-flag": "--@id"
     }
   ],
-  "name": "Classify-ML-RandomSubwET-Train",
-  "description": "A Cytomine software for classifying crops with Random subwindows and ExtraTrees (training). All images are downloaded to the \u0027/data\u0027 folder.",
+  "name": "Classify-ML-RandomSubwET-Pred-BI",
+  "description": "A Cytomine software for classifying crops with Random subwindows and ExtraTrees (prediction). All images are downloaded to the \u0027/data\u0027 folder.",
   "schema-version": "cytomine-0.1",
   "container-image": {
-    "image": "cytomine-uliege/s_classify-ml-randomsubwet-train",
+    "image": "cytomine-uliege/s_classify-ml-randomsubwet-pred-bi",
     "type": "singularity"
   }
 }
