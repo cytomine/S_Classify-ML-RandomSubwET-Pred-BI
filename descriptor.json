@@ -1,5 +1,5 @@
 {
-  "command-line": "python run.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE CYTOMINE_ID_JOB CYTOMINE_ID_PROJECTS CYTOMINE_ID_USERS CYTOMINE_ID_IMAGES CYTOMINE_ID_TERMS CYTOMINE_REVIEWED CYTOMINE_DOWNLOAD_ALPHA CYTOMINE_ZOOM_LEVEL N_JOBS ",
+  "command-line": "python run.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE CYTOMINE_ID_JOB CYTOMINE_ID_PROJECTS CYTOMINE_ID_USERS CYTOMINE_ID_IMAGES CYTOMINE_ID_TERMS CYTOMINE_REVIEWED CYTOMINE_DOWNLOAD_ALPHA CYTOMINE_ZOOM_LEVEL N_JOBS CYTOMINE_ID_POSITIVE_TERM CYTOMINE_ID_NEGATIVE_TERM ",
   "inputs": [
     {
       "name": "Cytomine host",
@@ -142,6 +142,28 @@
       "value-key": "@ID",
       "optional": true,
       "id": "n_jobs",
+      "type": "Number",
+      "command-line-flag": "--@id"
+    },
+    {
+      "default-value": -1,
+      "name": "Positive term id",
+      "description": "If the classification problem was binarized at training, the classifier will produce binary predictions. This is the identifier of the term that should be associated with the positive predictions.",
+      "set-by-server": false,
+      "value-key": "@ID",
+      "optional": true,
+      "id": "cytomine_id_positive_term",
+      "type": "Number",
+      "command-line-flag": "--@id"
+    },
+    {
+      "default-value": -1,
+      "name": "Negative term id",
+      "description": "If the classification problem was binarized at training, the classifier will produce binary predictions. This is the identifier of the term that should be associated with the negative predictions.",
+      "set-by-server": false,
+      "value-key": "@ID",
+      "optional": true,
+      "id": "cytomine_id_negative_term",
       "type": "Number",
       "command-line-flag": "--@id"
     }
