@@ -77,17 +77,20 @@ def main(argv):
             y_pred = pyxit.predict(x)
 
         predicted_terms = classes.take(y_pred, axis=0)
+        collection = AnnotationCollection()
         for i in cj.monitor(range(x.shape[0]), start=80, end=99, period=0.005, prefix="Uploading predicted terms"):
             annot, term, proba = downloaded[i], predicted_terms[i], probas[i]
-            if proba is None:
-                Annotation(location=annot.location, id_image=annot.image, id_project=cj.project.id, id_terms=[int(term)]).save()
-            else:
-                new_annotation = Annotation(location=annot.location, id_image=annot.image, id_project=cj.project.id).save()
-                AnnotationTerm(
-                    id_annotation=new_annotation.id, id_term=int(term),
-                    rate=float(proba) if proba is not None else None
-                ).save()
 
+            parameters = {
+                "location": annot.location,
+                "id_image": annot.image,
+                "id_project": cj.project.id,
+                "id_terms": [int(term)]
+            }
+            if proba is not None:
+                parameters["rate"] = float(proba)
+            collection.append(Annotation(**parameters))
+        collection.save()
         cj.job.update(status=Job.TERMINATED, status_comment="Finish", progress=100)
 
 
