@@ -65,43 +65,36 @@
       "command-line-flag": "--@id"
     },
     {
-      "name": "Cytomine projects ids",
-      "description": "(Annotations filtering) Identifiers of projects of which the annotations should be selected for training.",
-      "set-by-server": false,
-      "value-key": "CYTOMINE_PROJECTS",
-      "optional": true,
-      "id": "cytomine_id_projects",
-      "type": "String",
-      "command-line-flag": "--@id"
-    },
-    {
       "name": "Cytomine users ids",
-      "description": "(Annotations filtering) Identifiers of users of which the annotations should be selected for training.",
+      "description": "(Annotations filtering) Identifiers of users of which the annotations should be selected for prediction.",
       "set-by-server": false,
       "value-key": "@ID",
       "optional": true,
       "id": "cytomine_id_users",
-      "type": "String",
+      "type": "ListDomain",
+      "uri": "/api/project/$currentProject$/user.json",
       "command-line-flag": "--@id"
     },
     {
       "name": "Cytomine images ids",
-      "description": "(Annotations filtering) Identifiers of images of which the annotations should be selected for training.",
+      "description": "(Annotations filtering) Identifiers of images of which the annotations should be selected for prediction.",
       "set-by-server": false,
       "value-key": "@ID",
       "optional": true,
       "id": "cytomine_id_images",
-      "type": "String",
+      "type": "ListDomain",
+      "uri": "/api/project.json",
       "command-line-flag": "--@id"
     },
     {
       "name": "Cytomine terms ids",
-      "description": "(Annotations filtering) Identifiers of terms of which the annotations should be selected for training.",
+      "description": "(Annotations filtering) Identifiers of terms of which the annotations should be selected for prediction.",
       "set-by-server": false,
       "value-key": "@ID",
       "optional": true,
       "id": "cytomine_id_terms",
-      "type": "String",
+      "type": "ListDomain",
+      "uri": "/api/project/$currentProject$/term.json",
       "command-line-flag": "--@id"
     },
     {
@@ -156,7 +149,8 @@
       "value-key": "@ID",
       "optional": true,
       "id": "cytomine_id_term_positive",
-      "type": "Number",
+      "type": "Domain",
+      "uri": "/api/project/$currentProject$/term.json",
       "command-line-flag": "--@id"
     },
     {
@@ -167,7 +161,8 @@
       "value-key": "@ID",
       "optional": true,
       "id": "cytomine_id_term_negative",
-      "type": "Number",
+      "type": "Domain",
+      "uri": "/api/project/$currentProject$/term.json",
       "command-line-flag": "--@id"
     }
   ],
@@ -175,7 +170,7 @@
   "description": "A Cytomine software for classifying crops with Random subwindows and ExtraTrees (prediction). All images are downloaded to the \u0027/data\u0027 folder.",
   "schema-version": "cytomine-0.1",
   "container-image": {
-    "image": "cytomine-uliege/s_classify-ml-randomsubwet-pred-bi",
+    "image": "cytomineuliege/s_classify-ml-randomsubwet-pred-bi",
     "type": "singularity"
   }
 }
