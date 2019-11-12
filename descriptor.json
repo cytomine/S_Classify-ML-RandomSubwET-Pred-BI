@@ -83,7 +83,7 @@
       "optional": true,
       "id": "cytomine_id_images",
       "type": "ListDomain",
-      "uri": "/api/project.json",
+      "uri": "/api/project/$currentProject$/imageinstance.json",
       "command-line-flag": "--@id"
     },
     {
