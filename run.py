@@ -35,6 +35,9 @@ def main(argv):
         # annotation filtering
         cj.logger.info(str(cj.parameters))
 
+        # use only images from the current project
+        cj.parameters.cytomine_id_projects = "{}".format(cj.parameters.cytomine_id_project)
+
         cj.job.update(progress=1, statuscomment="Preparing execution (creating folders,...).")
         root_path = "/data/" #Path.home()
         image_path, downloaded = setup_classify(
