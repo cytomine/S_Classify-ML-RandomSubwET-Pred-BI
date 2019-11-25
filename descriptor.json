@@ -86,8 +86,8 @@
       "id": "cytomine_id_images",
       "type": "ListDomain",
       "uri": "/api/project/$currentProject$/imageinstance.json",
-      "uri-print-attribute": "instance_filename",
-      "uri-sort-attribute": "instance_filename",
+      "uri-print-attribute": "instanceFilename",
+      "uri-sort-attribute": "instanceFilename",
       "command-line-flag": "--@id"
     },
     {
