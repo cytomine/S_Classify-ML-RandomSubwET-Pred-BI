@@ -60,8 +60,8 @@
       "id": "cytomine_id_job",
       "type": "Domain",
       "uri": "/api/job.json?project=$currentProject$",
-      "uriSortAttribute": "softwareName",
-      "uriPrintAttribute": "softwareName",
+      "uri-sort-attribute": "softwareName",
+      "uri-print-attribute": "softwareName",
       "command-line-flag": "--@id"
     },
     {
@@ -73,6 +73,8 @@
       "id": "cytomine_id_users",
       "type": "ListDomain",
       "uri": "/api/project/$currentProject$/user.json",
+      "uri-print-attribute": "username",
+      "uri-sort-attribute": "username",
       "command-line-flag": "--@id"
     },
     {
@@ -84,6 +86,8 @@
       "id": "cytomine_id_images",
       "type": "ListDomain",
       "uri": "/api/project/$currentProject$/imageinstance.json",
+      "uri-print-attribute": "instance_filename",
+      "uri-sort-attribute": "instance_filename",
       "command-line-flag": "--@id"
     },
     {
@@ -95,6 +99,8 @@
       "id": "cytomine_id_terms",
       "type": "ListDomain",
       "uri": "/api/project/$currentProject$/term.json",
+      "uri-print-attribute": "name",
+      "uri-sort-attribute": "name",
       "command-line-flag": "--@id"
     },
     {
