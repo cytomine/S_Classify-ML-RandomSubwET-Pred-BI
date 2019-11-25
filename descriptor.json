@@ -157,6 +157,8 @@
       "id": "cytomine_id_term_positive",
       "type": "Domain",
       "uri": "/api/project/$currentProject$/term.json",
+      "uri-print-attribute": "name",
+      "uri-sort-attribute": "name",
       "command-line-flag": "--@id"
     },
     {
@@ -169,6 +171,8 @@
       "id": "cytomine_id_term_negative",
       "type": "Domain",
       "uri": "/api/project/$currentProject$/term.json",
+      "uri-print-attribute": "name",
+      "uri-sort-attribute": "name",
       "command-line-flag": "--@id"
     }
   ],
