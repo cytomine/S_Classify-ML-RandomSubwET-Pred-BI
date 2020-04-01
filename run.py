@@ -68,7 +68,7 @@ def main(argv):
         pyxit = joblib.load(model_filepath)
 
         # set n_jobs
-        pyxit.base_estimator = cj.parameters.n_jobs
+        pyxit.base_estimator.n_jobs = cj.parameters.n_jobs
         pyxit.n_jobs = cj.parameters.n_jobs
 
         cj.job.update(progress=55, statusComment="Predict...")
