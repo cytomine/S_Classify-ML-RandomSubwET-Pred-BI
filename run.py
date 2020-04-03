@@ -39,7 +39,7 @@ def main(argv):
         cj.parameters.cytomine_id_projects = "{}".format(cj.parameters.cytomine_id_project)
 
         cj.job.update(progress=1, statuscomment="Preparing execution (creating folders,...).")
-        root_path = "/data/" #Path.home()
+        root_path = Path.home()
         image_path, downloaded = setup_classify(
             args=cj.parameters, logger=cj.job_logger(1, 40),
             dest_pattern="{image}_{id}.png", root_path=root_path,

@@ -61,7 +61,7 @@
       "type": "Domain",
       "uri": "/api/job.json?project=$currentProject$",
       "uri-sort-attribute": "softwareName",
-      "uri-print-attribute": "softwareName",
+      "uri-print-attribute": "name",
       "command-line-flag": "--@id"
     },
     {
@@ -180,7 +180,8 @@
   "description": "A Cytomine software for classifying crops with Random subwindows and ExtraTrees (prediction). All images are downloaded to the \u0027/data\u0027 folder.",
   "schema-version": "cytomine-0.1",
   "container-image": {
-    "image": "cytomineuliege/s_classify-ml-randomsubwet-pred-bi",
+    "image": "cytomine/s_classify-ml-randomsubwet-pred-bi",
     "type": "singularity"
   }
 }
+
