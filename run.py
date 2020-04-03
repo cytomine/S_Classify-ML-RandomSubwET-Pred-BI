@@ -92,7 +92,7 @@ def main(argv):
                 "id_terms": [int(term)]
             }
             if proba is not None:
-                parameters["rate"] = float(proba)
+                parameters["rate"] = float(np.max(proba))
             collection.append(Annotation(**parameters))
         collection.save()
         cj.job.update(status=Job.TERMINATED, status_comment="Finish", progress=100)
